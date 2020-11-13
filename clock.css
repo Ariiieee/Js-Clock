@@ -1,0 +1,76 @@
+html {
+  background: url("images/anna-wangler-_GqwoiT7QY8-unsplash.jpg");
+  background-size: cover;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.6rem;  /* the size of the circle */
+  opacity: 0.9;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.clock {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+  padding: 2rem;
+  border: 20px solid #000000;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0px rgb(73, 68, 68),
+              inset 0 0 0 0px #a8a0a0,
+              inset 0 0 0 0px black,
+              0 0 10px 2px rgb(36, 32, 32);
+ 
+}
+
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateY(-3px);
+}
+
+
+.hand {
+  position: absolute;
+  width: 50%;
+  background: black;
+  height: 0.7rem;
+  top: 50%;
+  /* the origin is where the clock hands will start the rotation off  */
+  transform-origin: 90% ; /* i used 90% instead of 100%, because 90deg places the clock hand in the middle*/
+  transform: rotate(90deg); /* all our clock hands pointing up and down and not from left to right*/
+  transition-timing-function: cubic-bezier(0.19, 1.97, 0, 1.62); /* animation of how the clock hand ticks*/
+}
+
+
+
+.dot {
+  border-radius: 50%; /* changed the shape of the clock hand */
+}
+
+
+ .second-hand {
+  background: #6e6868;
+  height: 0.3rem;
+}
+
+.min-hand {
+  height: 0.9rem;
+}
+
+.hour-hand {
+  height: 1rem
+} 
+
